@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index page</title>
+    <style>
+         .img{
+              height: 100px;
+              width: 100px;
+              border-radius: 40%;
+              float: left;
+          }
+          .header{
+           text-align: center;
+           font-size: 27px;
+          }
+          aside{
+            height: 900px;
+            width: 250px;
+            font-size: 35px;
+            background-color: lightblue;
+            padding: 3%;
+            text-align: center;
+            padding: 10px;
+            float: left;
+          }
+          a{
+            text-decoration: none;
+          }
+          #div{
+            margin: 20px auto;
+            padding: 20px;
+           border-radius: 10px;
+           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          }
+          .customer-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .customer-item {
+      background-color: #f9f9f9;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .customer-item:hover {
+      background-color: #e9e9e9;
+    }
+
+    .customer-name {
+      font-weight: bold;
+    }
+
+    .customer-email {
+      color: #666;
+    }
+
+    .add-customer-form {
+      margin-top: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .form-group input {
+      width: 40%;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .form-group button {
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .form-group button:hover {
+      background-color: #45a049;
+    }
+    body{
+        font-family: Arial, sans-serif;
+        background-color: cadetblue;
+    }
+    section{
+        width: 60%;
+        margin: 20px auto;
+      padding: 10px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .section{
+            text-align: center;
+            height: 500px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            background-color: lemonchiffon;
+          }
+    </style>
+</head>
+<body>
+    <div id="div">
+            <img src="https://ci3.googleusercontent.com/meips/ADKq_NbX1am19_vA1KDO8MTKqOlL7tBCQ7HEKjHHfBYG3Bx8kaEDkk9rKxFuUb-b-LbjU82gSWrt8xXJBB0fAywhUqoDbYu9pGrZOzZmcaRenhgh4YEFqBpyHUhsqgzRz-DoIpIIzMk_dh9F_Wf_IXgmre1tWEvJ_yna4dIEyuxuc07Jd4ZxY_YBJ1d4UunyRPdc9ytgD-12cszZo7KgPnt4pm32NAo1qEs=s0-d-e1-ft#https://dynamic.brandcrowd.com/preview/logodraft/f36f1a6a-0e0a-452e-8ef8-fad40575fc67/image/large.png?bust=4efc742f-76ae-48cc-8209-1fc1f59ad53a" alt="" class="img">
+            <h4>テディ@レディ</h4>
+            <div class="header">
+                <h1>Teddy@Reddy</h1>
+                <h1>CRM (CUSTOMER RELATIONSHIP MANAGEMENT) Application </h1>
+            </div>
+        </header>
+        <aside>
+            <a href="##">Dashboard</a><br>
+            <a href="##">Contacts</a><br>
+            <a href="##">Tasks</a><br>
+        </aside>
+        <section style="background-color: lightblue;">
+            <h2>Add New Customer</h2>
+             <form class="add-customer-form" id="addCustomerForm">
+            <div class="form-group">
+             <label for="name">Name:</label>
+             <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+             <label for="email">Email:</label>
+             <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" onclick="teddy()" >Add Customer</button>
+                <button onclick="edit()">Edit</button>
+                <button onclick="del()">Delete</button>
+            </div>
+            </form>
+            </div>
+        </section>
+        <section style="background-color: aqua;">
+            <h2>Add New Tasks</h2>
+            <form class="add-customer-form" id="addCustomerForm">
+              <div class="form-group">
+                <label for="name"> Task Name:</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Description About Task:</label>
+
+                <input type="text" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <button type="submit" onclick="teddy()" >Add Tasks</button>
+  
+                     <button onclick="edit()">Edit</button>
+                  <button onclick="del()">Delete</button>        
+  </div>
+            </form>
+          </div>
+        </section>
+        <section style="background-color: plum;">
+            <h2>Add New Contact Details</h2>
+            <form class="add-customer-form" id="addCustomerForm">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Contact no:</label>
+                <input type="number" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <button type="submit" onclick="teddy()" >Add Contact</button>
+
+              <button onclick="edit()">Edit</button>
+               <button onclick="del()">Delete</button>           
+             </div>
+            </form>
+          </div>
+        </section>
+        <br><br>
+        <section class="section">
+            <h2>Give A Quick Review About Your Experience </h2>
+            <div>
+              <input type="text" placeholder="Enter ur name/mail id"><br><br>
+              <input type="text" placeholder="Enter ur Review"><br><br>
+              <input type="number" placeholder="enter ur rating out of 5"><br><br>
+              <input type="file"><p>upload ur image</p><br>
+              <button onclick="button()">Submit</button>
+            </div>
+          </section>
+        <footer>
+            <div style="text-align: center; display: flex; justify-content: space-evenly;">
+                <h2>&copy; Teddy@Reddy</h2>
+                <h2>&copy; CRM (CUSTOMER RELATIONSHIP MANAGEMENT) </h2>
+            </div>
+            <div style="text-align: center; display: flex; justify-content: space-evenly;">
+                <h2>&copy; All Copy Rights Are for Teddy@Reddy Website </h2>
+                <br>
+                <h2>support</h2>
+                <h2>Terms & Privacy</h2>
+            </div>
+        </footer>
+    </div>
+        <script>
+            // JavaScript code for handling form submission and displaying customers
+            const addCustomerForm = document.getElementById('addCustomerForm');
+            const customerList = document.getElementById('customerList');
+        
+            addCustomerForm.addEventListener('submit', function(event) {
+              event.preventDefault();
+        
+              const name = this.elements['name'].value;
+              const email = this.elements['email'].value;
+        
+              if (name && email) {
+                const customerItem = document.createElement('li');
+                customerItem.classList.add('customer-item');
+                customerItem.innerHTML = `
+                  <p class="customer-name">${name}</p>
+                  <p class="customer-email">${email}</p>
+                `;
+                customerList.appendChild(customerItem);
+        
+                // Clear the form fields
+                this.reset();
+              } else {
+                alert('Please provide both name and email.');
+              }
+            });
+
+            function button(){
+         alert('u r review is recorded')
+       }
+       function teddy(){
+        alert('u r action is recorded');
+       }
+       function edit(){
+        alert('click ok to edit');
+       }
+       function del(){
+        alert('click ok to Delete');
+       }
+          </script>
+</body>
+</html>
